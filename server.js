@@ -3,6 +3,8 @@ const app = express();
 const port = 3000;
 const database = 'mongodb://localhost/wasdag';
 
+const path = require('path');
+
 const mongoose = require('mongoose');
 mongoose.set('useNewUrlParser', true);
 mongoose.connect(database);
@@ -32,14 +34,11 @@ app.post('/', function(req, res) {
     res.status(200).send({newGroup});
 });
 
-app.get('/', function(req, res) {
-    res.send('Hello World');
-});
 
-// app.use('/', express.static(path.join(__dirname, 'dist')))
+app.use('/', express.static(path.join(__dirname, 'dist')))
  
-// app.all('*', (req, res) => { 
-//     res.status(200).sendFile(path.join(__dirname, 'dist') + "/index.html");
-// });
+app.all('*', (req, res) => { 
+    res.status(200).sendFile(path.join(__dirname, 'dist') + "/index.html");
+});
 
 app.listen(port, () => console.log(`App listening on port ${port}!`))
