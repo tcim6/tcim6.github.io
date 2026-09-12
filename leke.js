@@ -60,7 +60,10 @@ function o(args){
 					document.execCommand("insertHTML", false, text)
 				});
 			},
-			"type": o =>{} // then event handler
+			"type": o =>{},
+			"placeholder": o =>{				// should implement dynamic
+				attr(r,"placeholder",args[prop])
+			}
 		};
 
 		map[prop]() 

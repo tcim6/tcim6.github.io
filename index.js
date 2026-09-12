@@ -31,17 +31,9 @@ objectsView)
 
 var queryType="filter";
 var queryValue="";
+var queryMethod="includes";
 
 function mod(value){ // value , type of method
-	/*
-		grab mod settings from a service
-		_[modType](mod parameters)
-		Collections.get("state")
-		> filter set
-		> filter stack
-			> type(filter,every,map)
-	*/
-
 	return _[queryType](value,function(val){
 		return _.includes(val.data,queryValue);
 	});
@@ -87,15 +79,16 @@ e(selection,"change",function(){
 /* 
 	do not clear inputfield
 	1,2,3
+	read-in mdn page filter method
 */
 
-var queryArgument1=o({type:"input"});
+var queryArgument1=o({type:"input",placeholder:"queryValue"});
+var queryArgument2=o({type:"input",placeholder:"queryMethod"});
 b(view,queryArgument1)
+b(view,queryArgument2)
 
 e(queryArgument1,"change",function(){ // set filter parameters
 	queryValue=this.target.value;
-
-	/*Handler .. */
 
 	clear(objectsView)
 	mod(Collections.get("objects")).map(function(obj){ 
@@ -103,3 +96,10 @@ e(queryArgument1,"change",function(){ // set filter parameters
 	})
 })
 
+e(queryArgument2,"change",function(){ // set filter parameters
+	queryMethod=this.target.value;
+	clear(objectsView)
+	mod(Collections.get("objects")).map(function(obj){ 
+		b(objectsView,text(string(obj)))
+	})
+})

@@ -45,10 +45,6 @@ Activity
 Smokes
 Shower
 
-keep state by recording events
-
 Charting refers to the visual representation of data, mapping trends, or systematically recording information, widely used in finance, note-taking, and healthcare. It involves creating graphs, diagrams, or spreadsheets to analyze, organize, or track progress.
 
-A template is a pre-designed pattern, mold, or framework used as a guide to create multiple items consistently. Instead of starting from scratch, a template provides a baseline structure (like formatting or dimensions) that you can easily fill in or copy.
-
-viewing the record check for notes;the list is loaded via the router
+A template is a pre-designed pattern, mold, or framework used as a guide to create multiple items consistently. Instead of starting from scratch, a template provides a baseline structure (like formatting or dimensions) that you can easily fill in or copy
