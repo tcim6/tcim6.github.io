@@ -1,24 +1,3 @@
-
-fiets route
-klimaat
-
-
-wat zal ik allemaal verwerken in de app
-
-
-
--:-
-
-RegisterService({
-	name:Bookmarks,
-})
-
-RegisterService({
-	name:Redux,
-})
-
-## Notes
-
 >> 
 >> component examples page
 >> info to surfable format function
